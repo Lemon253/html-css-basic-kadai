@@ -22,7 +22,7 @@ h1 {
   /* 下線 */
   border-bottom: 3px solid rgb(115, 115, 114);
 }
-#basic p {
+#basic > p {
    font-weight: bold; 
 }
 
