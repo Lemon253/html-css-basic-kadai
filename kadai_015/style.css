@@ -9,9 +9,9 @@ html {
 }
 h1 {
   /* フォントの種類指定 */
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  /* font-weight: <weight>; */
   font-style: normal;
   /* フォントサイズをルート要素の2倍に設定 */
   font-size: 2rem;
