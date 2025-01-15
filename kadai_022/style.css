@@ -1,0 +1,97 @@
+/* h1、p、body要素の上下左右余白（margin）を0に */
+h1, p, body {
+  margin: 0;
+}
+/* 記事内全てのp要素とa要素のフォントサイズを20px */
+p, a {
+  font-size: 20px;
+}
+header {
+  /* 下の余白設定 */
+  /* padding-bottom: 20px; */
+  margin-bottom: 20px;
+  /* 背景色 */
+  background-color: rgb(244, 79, 79);
+  /* 中央揃え */
+  text-align: center;
+  /* 文字色 */
+  color: rgb(255, 255, 255);
+}
+main {
+  /* main要素内の余白設定 */
+  padding: 10px;
+}
+#parent {
+  /* flexコンテナ設置 */
+  display: flex;
+  /* 一番左と一番右のアイテムも含め、均等な間隔で配置する */
+  justify-content: space-around;
+  
+}
+.contents {
+  /* 枠線の設定 */
+  border: 3px solid rgb(238, 204, 204);
+  /* 幅の設定 */
+  flex-basis: 25%;
+  /* 要素内の上下、左右の余白設定 */
+  padding: 10px 15px;
+  /* 要素外の上下、左右の余白設定 */
+  margin: 20px 0;
+  /* 中央揃えに */
+  text-align: center;
+}
+h2::before {
+  content: "●";
+  color: rgb(239, 111, 139);
+}
+h2 {
+  /* 下線の各設定 
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-style: dashed;
+  text-decoration-color: rgb(236, 122, 122);　*/
+
+  font-size: 25px;
+  /* borderを使った下線の設定 */
+  border-bottom: 3px dotted rgb(236, 122, 122);
+
+}
+/* 2番目のp要素内のテキストの中で1番目の文字にのみスタイル適用 */
+.contents p:nth-of-type(2)::first-letter{
+    font-weight: bold;
+    color: rgb(97, 206, 249);
+}
+/* contentsのimg要素のみに適用 */
+.contents img {
+  margin: 10px 0;
+  width: 70%;
+}
+/* footerの設定 */
+footer {
+  background-color: rgb(244, 79, 79);
+  text-align: center;
+}
+footer a {
+  color: rgb(255, 255, 255);
+
+}
+/* 訪問済みのリンクの色設定 */
+a:visited {
+  color: rgb(193, 234, 251);
+}
+a:hover {
+  color: rgb(244, 178, 168);
+}
+/* レスポンシブ対応のスタイル */
+/* 画面幅が768px以下の場合下記を適用 */
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 30px;
+  }
+  p {
+    font-size: 25px;
+  }
+  #parent {
+    display: block;
+  }
+}
