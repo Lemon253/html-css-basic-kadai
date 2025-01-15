@@ -92,6 +92,8 @@ a:hover {
     font-size: 25px;
   }
   #parent {
-    display: block;
+    display: flex;
+    /* 要素を上から下に配置 */
+    flex-direction: column;
   }
 }
